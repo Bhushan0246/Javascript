@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> First JavaScript</title>
+	<style>
+		button{
+			border-radius: 8px;
+		}
+		#js,#hello{
+			float: right;
+			background-color: powderblue;
+		}
+		#demo,#date{
+			background-color: coral;
+		}
+		img,#close{
+			margin-left: 370px;
+		}
+		#demo1,#demo2{
+			display: none;
+		}
+	</style>
+	<script>
+window.alert('alert javascript');//You can skip window keyword & only write alert(). You can use an alert box to display data.
+function display() {
+  document.getElementById("demo1").style.display="block";
+  document.getElementById("demo2").style.display="block";
+} 
+function hide() {
+  document.getElementById("demo1").style.display="none";
+  document.getElementById("demo2").style.display="none";
+}
+</script>
+</head>
+<body>
+<h1>My First Javascript</h1>
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()" id="date">Display Date and Time.</button>
+<p id="demo"></p>
+<button type="button" onclick="document.getElementById('js').innerHTML='Hello !! JavaScript'" id="hello">Click me!</button><br>
+<p id="js"></p>
+<br>
+<hr><br>
+In this case JavaScript changes the value of the src (source) attribute of an image.<br>
+<img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimg%2F1943967.jpg&f=1&nofb=1" width="340px" height="280px" id="door"><br>
+<button type="button" onclick="document.getElementById('door').src='https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimg%2F1943967.jpg&f=1&nofb=1'" id="close">Close Door</button>
+<button type="button" onclick="document.getElementById('door').src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.wAd0tu4giubyyZ494S50vgAAAA%26pid%3DApi&f=1'" id="open">Open Door</button>
+<!--till here was internal script, now will write external script.--><br>
+
+<p id="demo1">Hello Dolly!</p>
+<p id="demo2">How are you?</p>
+<button type="button" onclick="display()">Display hidden</button>
+<button type="button" onclick="hide()">Display none</button><br>
+
+<br>Click on print button to print the page. <button onclick="window.print()">Print</button><!--the window.print() method in the browser to print the content of the current window.-->
+</body>
+</html>
