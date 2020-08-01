@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Variables</title>
+</head>
+<body>
+	<h1><i>JavaScript Variables</i></h1>
+<p>Create a variable, assign a value to it, and display it:</p>
+<p id="carname"></p>
+<p id="carname1"></p>
+<div>
+	The value of x after 3+4-6+4 is equals to: 
+<span id="arithematic"></span><br>
+The result of adding "John"+ " Doe":
+<span id="name"></span>
+</div>
+<br><script type="text/javascript">
+	//document.write() is other form of innerHTML().This is used at last only.The document.write() method should only be used for testing.
+document.write('document.write(): 5+6=');
+document.write(5 + 6);
+var carName = "Volvo";
+document.getElementById("carname").innerHTML = carName.length;//var.length will display the length of value assigned to var.
+var carName1 = "Volvo";
+document.getElementById("carname1").innerHTML = carName1[0];//var[index] will display the index char of value and from last char [var.length-n].
+var x=3+4-6+4;
+document.getElementById('arithematic').innerHTML=x;
+var x = "John" + " Doe";
+document.getElementById("name").innerHTML = x;
+</script>
+</body>
+</html>
