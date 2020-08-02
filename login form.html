@@ -1,0 +1,120 @@
+<DOCTYPE html>
+	<html>
+	<head>
+		<title>
+			login page
+		</title>
+<style>
+	body{
+		background:linear-gradient(280deg,aquamarine,chartreuse,coral,crimson,dodgerblue);
+		background-size:cover; 
+	}
+	label{
+		margin:4px; 
+		border:2px;
+		padding:14px;
+		border-radius:30px;
+		text-shadow:1px 1px black;
+	}
+	input{
+		margin:10px;
+		padding:10px;
+		border-radius:14px;
+		opacity:0.3;
+		border:2px solid black;
+		}
+	div{
+		padding:15px;
+		background-position:absolute;
+	}
+	button{
+		padding:15px;
+		margin:9px;
+		opacity:0.5;
+		border-radius:18px;
+		font-size:15px;
+		color:orange;
+	}
+	form{
+		background:linear-gradient(176deg,darkturquoise,deeppink,lawngreen);
+		background-repeat:no-repeat;
+		background-attachment:fixed;
+		border-radius:40px;
+		background-size:cover;
+		font-family:Courier New;
+		font-size:18px;
+		color:aqua;
+		opacity:0.4;
+		position:absolute;
+		margin-top:87px;
+		margin-left:42%;
+		margin-right:39%;
+	}
+	form:hover{
+		opacity:0.9;
+	}
+	input:hover{
+	opacity:0.9;
+	}
+	button:hover{
+	opacity:0.8; 
+	}
+	input:focus{
+		opacity:0.9;
+	}
+		#load{
+			display: none;
+			font-size: 3rem;
+		}
+		#circular	{
+		display: none;
+		width: 130px;
+		height: 130px;
+		margin-top: 10%;
+		border:18px solid dimgray;
+		border-top:18px solid skyblue;
+		border-radius: 50%;
+		animation-name: load;
+		animation-duration: 2.8s;
+		animation-timing-function: ease-in-out;
+		animation-iteration-count: infinite;
+		}
+		@keyframes load{
+			0%{
+				transform: rotate(0deg);
+			}
+			100%{
+				transform: rotate(360deg);
+			}
+		}
+</style>
+<script type="text/javascript">
+	function display() {
+		document.getElementById('body').style.display='none';
+		document.getElementById('circular').style.display='block';
+		document.getElementById('load').style.display='block';
+	}
+</script>
+</head>
+<body><center><div>
+<form method="post"  id="body">
+	<br>
+<i><label>Username :</label><br><br>
+<input type="Username" placeholder="username" required="Username" maxlength="30" tabindex="1"><br>
+	<br>
+	<label>E-mail :</label><br><br>
+		<input type="E-mail" placeholder="example@gmail.com" required="E-mail" maxlength="35" tabindex="1"><br>
+		<br>
+		<label>Password:</label><br><br>
+			<input type="Password" placeholder="****" required="Password" maxlength="20" tabindex="1"><br>
+			<br>
+			<button type="submit" onclick="display()">login</button>
+			<br><br>
+		</i></form>
+	</div>
+	<div id="load">Loading ...
+	<div id="circular"></div>
+</div>
+</center>	
+</body>
+	</html>
