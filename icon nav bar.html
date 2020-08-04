@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>Navigation Bar and Menu</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<style>
+			body{
+				background:linear-gradient(30deg,hotpink,lightskyblue,darkorange);
+				background-attachment: fixed;
+				word-spacing:10px;
+				line-height:45px;
+				font-family: fortie regular;
+				font-size: 22px;
+				letter-spacing: 1px;
+				margin:0;
+			}
+			ul {
+				border:2px solid midnightblue;
+				background-color:lightgreen;
+				width: 99%;
+				word-spacing:90px;
+				display: block;
+				position: fixed;
+				margin-top: 0;
+				overflow: auto;
+				}
+			.nav{
+				text-decoration:none;
+				text-align:center;
+				padding:3px 29px 6px 9px;
+				display:inline-block;
+				}
+			a{
+				text-decoration:none;
+				text-align:center;
+				display:inline;
+				font-size:38px;
+				font-family:Cursive;
+				color:black;
+				position: sticky;
+			}
+			a:hover,a:focus{
+				padding:13px 13.5px 13px 13.5px; 
+				background-color:rgb(135, 262, 135);  
+				border:2px solid darkgreen;
+			}
+			a:active{
+				background-color: skyblue;
+				border: 2px solid rgb(0, 0, 224);
+				padding: 18px 18.5px 18px 18.5px;
+			}
+			.icon_bar{
+				margin-left: 19px;
+			}
+			.menu{
+				position: fixed;
+				margin-left: 10%;
+				cursor: pointer;
+			}
+			.bar, .bar, .bar{
+				width: 36px;
+				height: 7px;
+				background-color: black;
+				margin: 7px 0px;
+			}
+			#conte, #conten, #content, #contents{
+				list-style-type: none;
+				display: none;
+			}
+		</style>
+		<script type="text/javascript">
+			function menu() {
+				document.getElementById('conte').style.display="block";
+				document.getElementById('conten').style.display="block";
+				document.getElementById('content').style.display="block";
+				document.getElementById('contents').style.display="block";
+			}
+		</script>
+	</head>
+	<body>
+		<ul type="none"><em>
+		<li class="nav"><a href="#home" id="home"><i class="fa fa-home"></i></a></li>
+		<li class="nav"><a href="#news"><i class="fa fa-newspaper-o" aria-hidden="true"></i></a></li>
+		<li class="nav"><a href="#contact"><i class="fa fa-address-book" aria-hidden="true"></i></a></li>
+		<li class="nav"><a href="#products"><i class="fa fa-product-hunt" aria-hidden="true"></i>
+</a></li>
+		<li class="nav" style="margin-left:40%;"><a href="#about"><i class="fa fa-info" aria-hidden="true"></i></a></li>
+	</em>
+	</ul>
+	<div class="icon_bar"><br><br>
+	<h1>This is a example of icon navigation bar.</h1>
+	The same you can do for vertical icon navbar.
+</div>
+<br>
+<h2>This is a menu, click on icon. Reload the page and click again. </h2>
+<div class="menu" onclick="menu()">
+	<div class="bar"></div>
+	<div class="bar"></div>
+	<div class="bar"></div>
+<div class="contents">
+	<li id="conte">Home</li>
+	<li id="conten">Products</li>
+	<li id="content">Contact us</li>
+	<li id="contents">About</li>
+</div>
+</div>
+</body>
+	</html>
