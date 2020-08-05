@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>side nav bar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-size: 22px;
+  font-family: sans-serif;
+}
+a{
+    text-decoration: none;
+}
+#content{
+	position: absolute;
+	margin-left: 11%;
+	margin-top: -30%;
+}
+.home{
+    display: block;
+    transition: 0.5s;
+  margin-left: -8%;
+padding: 12px;
+  width: 120px;
+  border:2px solid red;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: azure;
+  background-color: indianred;
+}
+.home:hover{
+      margin-left: -1%;
+}
+.news{
+    display: block;
+    transition: 0.5s;
+    margin-top:2%;
+  margin-left: -8%;
+padding: 12px;
+  width: 120px;
+  border:2px solid gold;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: azure;
+  background-color: goldenrod;
+}
+.news:hover{
+      margin-left: -1%;
+}
+.product{
+    display: block;
+    transition: 0.5s;
+    margin-top:2%;
+  margin-left: -8%;
+padding: 12px;
+  width: 120px;
+  border:2px solid darkcyan;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: azure;
+  background-color: skyblue;
+}
+.product:hover{
+      margin-left: -1%;
+}
+#contact{
+	word-spacing: 20px;
+      color: azure;
+    display: block;
+    transition: 0.5s;
+  margin-left: -8%;
+  margin-top:2%;
+padding: 12px;
+  width: 120px;
+  border:2px solid green;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: lightgreen;
+  text-decoration: none;
+}
+#contact:hover{
+      margin-left: -1%;
+}
+.about{
+    display: block;
+    transition: 0.5s;
+    margin-top:2%;
+    margin-left: -8%;
+    padding: 12px;
+    width: 120px;
+    border:2px solid black;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: azure;
+	background-color: #262626;
+    text-decoration: none;
+}
+.about:hover{
+      margin-left: -1%;
+}
+#subnav-content{
+	display: none;
+	position: absolute;
+	padding: 6px 9px 3px 8px;
+	margin-left: 134px;
+	margin-top: -10.5%;
+	border:2px solid darkgreen;
+	border-radius: 4px; 
+	background-color: #00cc7e;
+}
+#subnav-content a{
+	display: block;
+	border-bottom: 1.4px dashed black;
+	color:#874312;
+}
+#subnav-content a:hover{color: #432109;}
+</style>
+<script type="text/javascript">
+	function contact() {
+		document.getElementById('subnav-content').style.display = "block";
+	}
+</script>
+</head>
+<body>
+
+  <a class="home" href="#home">Home</a>
+  <a class="news" href="#news">News</a>
+  <a class="product" href="#product">Product</a>
+  <a class="about" href="#about">About</a>
+  <div id="subnav">
+  <a id="contact" href="#contact" onclick="contact()">Contact <i class="fa fa-angle-right"></i></a>
+<div id="subnav-content">
+<a href="#git">Github</a>
+<a href="#form">Contact form</a>
+<a href="#mail">e-mail</a>
+<a href="#call">Call</a>	
+</div>
+<div id="content">
+  <h2>Hoverable Side Nav</h2>
+  <h3>Try to hover this area, and see how the sidenav acts to the page.</h3>
+  <h4>Click on contacts to view more options.</h4>
+</div>
+</body>
+</html>
