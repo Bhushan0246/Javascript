@@ -1,0 +1,133 @@
+<DOCTYPE html>
+<html>
+<head>
+	<title> Custom form </title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<style>
+			body{background-image:url("https://www.teahub.io/photos/full/3-31630_4k-abstract-wallpapers-minimalist.jpg");
+				background-size:cover;
+				background-attachment:fixed;
+				background-repeat:no repeat;
+			}
+			select{
+				border-radius:27px;
+				opacity:0.6;
+				padding:8px;
+			}
+			textarea{
+				border-radius:27px;
+				opacity:0.6;
+				padding:8px;
+				transition: 0.4s;
+			}
+            input{
+                border-radius:27px;
+                opacity:0.6;
+                padding:8px;
+                font-family:Courier New;
+            }
+			button{
+				border-radius:27px;
+				opacity:0.6;
+				background-color:skyblue;
+				padding:7px;
+                font-family:Courier New;
+			}
+			button:hover{
+				opacity:0.9;
+				background-color:orangered;
+			}
+			textarea:hover,form input:hover{
+				opacity:0.9;
+				background:linear-gradient(34deg,cyan,cornflowerblue,crimson);
+			}
+            select:hover{
+                opacity:0.9;
+                background:linear-gradient(34deg,cyan,cornflowerblue,crimson);
+            }
+			label{
+				border-radius:27px;
+                font-family:Courier New;
+			}
+			form{
+				border-radius:27px;
+				border: 1px solid black;
+				position:absolute;
+				padding-bottom: 5px;
+				margin-top:10px;
+				margin-left:43%;
+				opacity:0.3; 
+			}
+			form:hover{
+				opacity:0.9;
+			}
+			h1{
+				border:4px groove indigo;
+			}
+			textarea,select{
+				margin:11px;
+			}
+			input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {
+				-webkit-appearance: none;
+				margin: 0;
+			}
+			.fa-search, button[type=search-submit]{font-size: 20px;border-radius: 6px;margin-left: 0;}
+			input[type=search]{width: 15%;font-size: 18px;transition: 0.4s;}
+			input[type=search]:focus{width:80%;}
+			.overlay{border: 1px solid; width: 99.8%;height: 100%;background-color:rgba(40,40,40,0.95);position: absolute;left: 0;display: none;top: 0;}
+			button[type=open-search]{border-radius: 10px;background-color: hotpink;padding: 8px;opacity: 0.9;}
+			.fa-times-circle{color: azure;font-size: 25px;position: relative;left: 98%;}
+			input[type=search-text]{position: absolute;top: 50%;left: 35%;background-color: #262626;font-size: 25px;color: azure;border: 1px solid black;}
+			button[type=submit-search] .fa-search{font-size: 32px;}
+			button[type=submit-search]{position: absolute;top: 50%;left: 59%;border-radius: 15px;background-color: #404040;color: azure;}
+		</style>
+	</head>
+	<body>
+<input type="search" name="search" placeholder=" search...">	<button type="search-submit"> <span> <i class="fa fa-search"> </i> </span> </button>
+
+<div><center>
+	<form>
+	<label>Title<sup>* </sup> </label>
+	<!--<select> is for a selection from the options given in <option>--><select>
+		<option>choose</option>
+		<option>Mr.</option>
+		<option>Mrs.</option>
+        <option>Other</option>
+	</select><br>
+	<label>Name<sup>*</sup></label>
+	<input type="text" required value="blabla" onfocus="value=''"><br><br>
+	<label>Mobile no.<sup>*</sup></label>
+	<input type="number" required><br><br>
+	<label>E-mail<sup>*</sup></label>
+	<input type="email" required><br>
+	<br>
+	<label>Contact us for<sup>*</sup></label>
+	<input type="text" required><br><br>
+	<label>Message<sup>*</sup></label>
+	<!--textarea is used for large area like messages. we can also use rows="value" cols="value" with it-->
+	<textarea type="message" rows="3" onfocus="rows='8'" required></textarea><br><br>
+	<button type="submit" value="submit"><b>Submit</b></button>	<!--reset type is to reset to the 'value' attr values--><button type="reset" value="Reset"><b>Reset</b></button>
+	</form>
+	</center>
+	</div>
+	<br><br><br><br>
+	<h2>Fullscreen Search</h2>
+<p>Click on the button to open the search box.</p>
+<button type="open-search" onclick="openbox()">Open search_box</button>
+	<div id="overlay" class="overlay">
+		<div>
+			<i class="fa fa-times-circle" onclick="closebox()" title="close"></i>
+			<input type="search-text" placeholder=" search.... ">
+			<button type="submit-search" title="go"> <i class="fa fa-search"></i> </button>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function openbox() {
+			document.getElementById('overlay').style.display="block";
+		}
+		function closebox() {
+			document.getElementById('overlay').style.display="none";
+		}
+	</script>
+	</body>
+	</html>
