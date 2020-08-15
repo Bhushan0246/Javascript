@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cards and Contact chips</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.self_card {
+			border-radius: 10%;
+  box-shadow: 2px 2px 3px rgba(0,0,0,0.2), -1.5px -1.5px rgba(0,0,0,0.2);
+  width: 20%;
+  padding: 15px;
+}
+		.self_card p{
+			padding: 5px;
+		}
+		.flip_card{
+			box-shadow: 3px 3px 3px rgba(0,0,0,0.2), -1.5px -1.5px rgba(0,0,0,0.2);
+			border-radius: 2%;
+			width: 20%;
+			padding: 15px;
+		}
+		.flip_card_back h2{margin-top: 45%;margin-left: 3%}
+		.flip_card_back{
+			border-radius: 2%;
+			position: absolute;
+			top:80.2%;left: 0.54%;
+			opacity: 0;
+			transform: rotateY(270deg);
+			transition: 0.5s;
+			width: 22.2%;height: 60%;
+			background: linear-gradient(44deg,powderblue,orangered,palegreen,gold)}
+		.flip_card_front{transition: 0.4s;opacity: 0.9;}
+		.flip_card:hover .flip_card_back{transform: rotateY(360deg);opacity: 1.9}
+		.flip_card:hover .flip_card_front{opacity: 0;transform: rotateY(-90deg);}
+		.chips{border-radius: 10%;font-size: 30px;position: absolute;background-color: lightgray;top: 10%;left: 70%;}
+		.chips p{display: inline;}
+		span{cursor: pointer;transition: 0.4s;padding: 0 12px;}
+		span:hover{color: white;background-color: red}
+	</style>
+</head>
+<body>
+<h1>This is a simple card.</h1>
+<div class="self_card">
+	<img src="https://image.freepik.com/free-vector/businessman-character-avatar-icon-vector-illustration-design_24877-18271.jpg" width="100%"><br>
+	<p>Bhushan Harode<br>
+	Student & Developer</p>
+</div>
+<br>
+<div class="flip_card" >
+	<div class="flip_card_front">
+		<img src="https://images.clipartlogo.com/files/istock/previews/9730/97305655-avatar-icon-of-girl-in-a-wide-brim-felt-hat.jpg" width="100%">
+	</div>
+	<div class="flip_card_back">	
+	<h2>Khatam Khalifa</h2>
+	<p>Student & Developer</p>	
+	</div>
+</div>
+<br>
+<div class="chips">
+	<h3>This is a contact chips.</h3><br>
+	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT8obM3FJgLDC4fHdaCdTH9KO_GPBN8KQdJwQ&usqp=CAU" width="45px" height="40px" style="border-radius: 50%;">
+	<p> Contact name </p> <span title="close" onclick="this.parentElement.style.display='none';"> &times; </span>
+</div>
+<br>
+</body>
+</html>
