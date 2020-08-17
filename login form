@@ -94,6 +94,15 @@
 		document.getElementById('circular').style.display='block';
 		document.getElementById('load').style.display='block';
 	}
+	function show() {
+		var x=document.getElementById("psw");
+		if(x.type === "password"){
+			x.type = "text";
+		}
+		else{
+			x.type === "password";
+		}
+	}
 </script>
 </head>
 <body><center><div>
@@ -106,7 +115,9 @@
 		<input type="E-mail" placeholder="example@gmail.com" required="E-mail" maxlength="35" tabindex="1"><br>
 		<br>
 		<label>Password:</label><br><br>
-			<input type="Password" placeholder="****" required="Password" maxlength="20" tabindex="1"><br>
+			<input type="password" placeholder="****" required="password" maxlength="20" tabindex="1" id="psw">
+			<br>
+			<label><input type="radio" onclick="show()">&nbsp;Show Password</label>
 			<br>
 			<button type="submit" onclick="display()">login</button>
 			<br><br>
