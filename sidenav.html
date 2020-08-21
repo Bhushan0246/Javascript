@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css2?family=Srisakdi&display=swap" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Overlay side nav</title>
+	<style type="text/css">
+		html{font-family: srisakdi;font-size: 20px;}
+		body{transition: background-color 0.5s;}
+		a{text-decoration: none;}
+		.sidenav{font-size: 25px;
+			font-family: cursive;
+			height: 100%;width: 14%;
+			background-color: rgba(1, 1, 1, 0.97);
+			position: fixed;
+			top: 0;bottom: 0;left: -18%;
+			padding: 0 18px;
+			transition: 0.5s;
+		}
+		.sidenav a:not(.close){display: block;
+			color: rgba(255, 250, 240, 0.2);
+			margin-top: 25%;
+		}
+		.sidenav a:hover:not(.close){color: rgba(230, 255, 255, 0.9);
+			border-right: 5px dotted springgreen;}
+		.open{margin-left: 3%;
+			cursor: pointer;}
+		.close{float: right;
+			font-size: 35px;
+			color: rgba(255, 250, 240, 0.3);}
+		.close:hover{color:red;}
+		#main{transition:margin-top 0.5s;}
+		.pushnav{background-color: rgba(1, 1, 1, 0.97);font-size: 35px;font-family: courier;		width: 100%;
+			padding: 20px 5px;
+			position: fixed;
+			top: -21%;left: 0;
+			padding: 2.5% 1%;
+			transition: 0.5s;
+			word-spacing: 125px;
+}
+		.pushnav a:not(.closepush){display: inline-block;
+			color: rgba(255, 250, 240, 0.2);}
+		.pushnav a:hover:not(.closepush){color: rgba(205, 133, 63, 0.9);
+			border-bottom: 5px dashed #80bfff;}
+		.closepush{font-size: 40px;font-weight: bold;
+			color: rgba(255, 250, 240, 0.3);}
+		.closepush:hover{color:orangered;}
+
+		.fullscreen{
+			position: fixed;
+			text-align: center;
+			height: 100%;width: 0;
+			top: 0; left: -60%;right: 0;bottom: 0;
+			background-color: rgba(45, 22, 6, 0.99);
+			padding: 10px 20px;
+			transition: 1.45s;
+			font-weight: 600; font-size: 38px;	}
+		.fullscreen_content a:not(.close_fullscreen){
+			margin-top: 5.5%;
+			display: block;
+			color: rgba(255, 250, 240, 0.1);	}
+		.fullscreen_content a:hover{
+			text-align: center;
+			color: rgba(255, 250, 240, 0.7);
+			border: transparent;
+			border-radius: 10px;
+			border-right: 8px double rgba(202, 185, 28, 0.2);
+			border-left: 8px double rgba(202, 185, 28, 0.2);
+			border-bottom: 2px solid rgba(202, 285, 28, 0.2);	}
+		.fullscreen_close{font-size: 40px;
+			color: rgba(240, 100, 120, 0.2);
+			float: right;}
+		.fullscreen_close:hover{color:red;}
+
+	</style>
+	<script type="text/javascript">
+		function opensidenav() {
+			document.getElementById('mysidenav').style.left="0";	}
+		function closesidenav() {
+			document.getElementById('mysidenav').style.left="-18%";		}
+		function openpushnav() {
+			document.getElementById('mypush').style.top="0";
+			document.getElementById('main').style.marginTop="11%";
+			document.body.style.backgroundColor = "rgba(0,0,0,0.4)";	}
+		function closepushnav() {
+			document.getElementById('mypush').style.top="-21%";
+			document.getElementById('main').style.marginTop="0";
+			document.body.style.backgroundColor = "rgba(0,0,0,0)";	}
+			function open_fullscreen() {
+				document.getElementById('fullscreen_nav').style.left="0";
+				document.getElementById('fullscreen_nav').style.width="98%";	}
+			function close_fullscreen() {
+				document.getElementById('fullscreen_nav').style.left="-60%";
+				document.getElementById('fullscreen_nav').style.width="0";	}
+	</script>
+</head>
+<body>
+<div class="sidenav" id="mysidenav">
+	<a href="#" class="close" onclick="closesidenav()">&times;</a>
+	<a href="#home"> Home </a>
+	<a href="#news"> News </a>
+	<a href="#products"> Products </a>
+	<a href="#contact"> Contact </a>
+	<a href="#about"> About </a>
+</div>
+<div id="main">
+<h2> Animated Sidenav Examples.</h2>
+<p>Click on the icon below to open the side navigation menu.</p>
+<h2 onclick="opensidenav()" class="open"> &#9776; Open animaied side navigation.</h2>
+<h2 onclick="openpushnav()" class="open"> &#9776; Open top-push navigation.</h2>
+<h2 onclick="open_fullscreen()" class="open"> &#9776; Open Full screen slide navigation.</h2>
+</div>
+
+
+<div class="pushnav" id="mypush">
+	<a href="#home"> Home </a>
+	<a href="#news"> News </a>
+	<a href="#products"> Products </a>
+	<a href="#contact"> Contact </a>
+	<a href="#about"> About </a>
+	<a href="#" class="closepush" onclick="closepushnav()">&times;</a>
+</div>
+
+<div class="fullscreen" id="fullscreen_nav">
+	<a href="#" onclick="close_fullscreen()" class="fullscreen_close"> &times; </a>
+	<div class="fullscreen_content">
+	<a href="#home"> Home </a>
+	<a href="#services"> Services </a>
+	<a href="#contact"> Contact </a>
+	<a href="#about"> About </a>
+	</div>
+</div>
+</body>
+</html>
