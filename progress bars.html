@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Progress Bar </title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	html{background-image: url(https://wallpaperaccess.com/full/1573753.jpg);
+			background-size: cover;
+			background-attachment: local;
+			text-align: center;
+	}
+	.progress_one{
+		height: 30px; width: 80%;
+		background-color: rgba(0, 0, 0, 0.8);
+		border: 1.5px solid black;
+		border-radius: 10px;
+		padding: 0 4px 4px 0;
+		margin-left: auto;margin-right: auto;
+	}
+	.pro_one_con{
+		height: 30px; width: 3%;
+		background-color: rgba(255, 255, 255, 0.8);
+		border: 1.5px solid #262626;
+		border-radius: 9.5px;
+		box-shadow: 1px 2px 8px ghostwhite;}
+	.progress_one:hover .pro_one_con{
+		animation: move 10s linear alternate;
+	}
+	@keyframes move{
+		99%{width: 90%;}
+	}
+	.change_color{
+		padding: 5px 10px;
+		font-size: 22px;
+		margin: 0 2% 1% 2%;
+		border-radius: 10px;
+		mix-blend-mode: screen;
+	}
+	hr{height: 0; border: 5px double #999999;}
+	</style>
+	<script type="text/javascript">
+		function blue(){
+			document.getElementById('progress_one_container').style.backgroundColor = "dodgerblue";
+			document.getElementById('progress_one_container').style.boxShadow= "1px 2px 8px #4da6ff";
+		}
+		function red() {
+			document.getElementById('progress_one_container').style.backgroundColor = "#d62929";
+			document.getElementById('progress_one_container').style.boxShadow= "1px 2px 8px #de5454";
+		}
+		function green() {
+			document.getElementById('progress_one_container').style.backgroundColor = "#009933";
+			document.getElementById('progress_one_container').style.boxShadow= "1px 2px 8px #00cc44";
+		}
+		function white() {
+			document.getElementById('progress_one_container').style.backgroundColor = "white";
+			document.getElementById('progress_one_container').style.boxShadow= "1px 2px 8px ghostwhite";
+		}
+	</script>
+</head>
+<body>
+<h2>This a hoverable moving progress bar.</h2>
+<div class="progress_one">
+<div id="progress_one_container" class="pro_one_con"><hr></div>
+</div>
+<br>
+<h3 style="color: #e6f2ff;">Try changing colors: </h3>
+<button onclick="blue()" class="change_color">Blue</button>
+<button onclick="red()" class="change_color">Red</button>
+<button onclick="green()" class="change_color">Green</button>
+<button onclick="white()" class="change_color">White</button>
+</body>
+</html>
