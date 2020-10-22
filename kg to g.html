@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="refresh" content="30">
+	<title>kilograms to grams convertor</title>
+	<style type="text/css">
+		body{
+			font-size: 2vw;
+			color: indigo;
+			background-image: url(https://screenbeauty.com/image/download/34434-sunrise-4k-8k-1440-x-2560.jpg);
+			background-attachment: fixed;
+			background-size: 100% 100%;
+			background-origin: padding-box;
+			animation: bg 15s linear infinite;
+		}
+		@keyframes bg{
+			50%{background-image: url(https://cdn.dribbble.com/users/13449/screenshots/3200530/sunrise.png);}
+			100%{background-image: url(https://screenbeauty.com/image/download/34434-sunrise-4k-8k-1440-x-2560.jpg);}
+		}
+		fieldset{
+			top: 5%;
+			left: 18%;
+			padding: 1.2rem 2rem;
+			position: absolute;
+			border:6px double #1a1a1a;
+			border-radius: 5px;
+			border-top-right-radius: 70px;
+		}
+		legend{
+			text-shadow: 2px 4px 3px rgb(75, 50, 90);
+		}
+		::placeholder{
+			font-size: 1.54vw;
+			color: rgb(75, 50, 90);
+		}
+		input{
+			border: none;
+			border-bottom: 2px solid #262626;
+			background-color: transparent;
+			padding: .5vmin;
+			outline: 0;
+			font-size: 1.6vw;
+			color: indigo;
+		}
+	</style>
+</head>
+<body>
+		<fieldset>
+			<legend>Kilograms to Grams</legend>
+<p>
+  <label>Kilograms: &nbsp;</label>
+  <input id="inputPounds" type="number" placeholder="&nbsp;kg" oninput="weightConverter(this.value)" onchange="weightConverter(this.value)" contenteditable min="0">
+</p>
+<p>
+	Grams: <span id="outputGrams"></span>
+</p>
+</fieldset>
+
+<script type="text/javascript">
+	function weightConverter(valNum) {
+  document.getElementById("outputGrams").innerHTML = valNum * 1000;
+}
+</script>
+</body>
+</html>
