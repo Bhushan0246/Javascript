@@ -27,9 +27,6 @@
 			border-radius: 5px;
 			border-top-right-radius: 70px;
 		}
-		legend{
-			text-shadow: 2px 4px 3px rgb(75, 50, 90);
-		}
 		::placeholder{
 			font-size: 1.54vw;
 			color: rgb(75, 50, 90);
@@ -53,7 +50,7 @@
   <input id="inputPounds" type="number" placeholder="&nbsp;kg" oninput="weightConverter(this.value)" onchange="weightConverter(this.value)" contenteditable min="0">
 </p>
 <p>
-	Grams: <span id="outputGrams"></span>
+	Grams: &nbsp; <span id="outputGrams">&nbsp;</span>
 </p>
 </fieldset>
 
