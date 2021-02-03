@@ -92,7 +92,7 @@ padding: 12px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     color: azure;
-	background-color: #262626;
+    background-color: #262626;
     text-decoration: none;
 }
 .about:hover{
@@ -113,7 +113,9 @@ padding: 12px;
 	border-bottom: 1.4px dashed black;
 	color:#874312;
 }
-#subnav-content a:hover{color: #432109;}
+#subnav-content a:hover{
+	color: #432109;
+}
 </style>
 <script type="text/javascript">
 	function contact() {
@@ -128,7 +130,7 @@ padding: 12px;
   <a class="product" href="#product">Product</a>
   <a class="about" href="#about">About</a>
   <div id="subnav">
-  <a id="contact" href="#contact" onclick="contact()">Contact <i class="fa fa-angle-right"></i></a>
+  <a id="contact" href="#contact" onclick="contact()">Contact <i class="fa fa-angle-right"></i> </a>
 <div id="subnav-content">
 <a href="#git">Github</a>
 <a href="#form">Contact form</a>
