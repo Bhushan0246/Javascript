@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #eacdd3;
+    text-align: center;
+    font-family: 'courier';
+}
+
+.heading{
+    font-size: 2rem;
+    background-color: rgba(4, 0, 56, 0.8);
+    color: #dbd0f6;
+
+    span{
+        color: #c79da5;
+    }
+
+}
+
+.score-card{
+    margin-top: 2rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vmin;
+
+    .score{
+        font-size: 4vmin;
+        color: rgba(4, 0, 56, 0.8);
+        font-weight: bold;
+    }
+}
+
+.options{
+    padding: 2vmin;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+.option img{
+    width: 13rem;
+    height: 13rem;
+    border-radius: 50%;
+}
+
+.winner{
+    margin-top: 5rem;
+    padding: 1vmin 2vmin;
+    font-size: 4vmin;
+    display: inline-block;
+    color: #dbd0f6;
+    background-color: rgba(4, 0, 56, 0.8);
+    border-radius: 2vmin;
+}
